@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@theme {
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #0f172a;
+  --color-text-light: #1e293b;
+  --color-text-dark: #f1f5f9;
+}
+
+/* Dark mode base setup */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+@layer theme {
+  :root {
+    --color-primary: #1d4ed8;
+  }
+  .dark {
+    --color-primary: #2563eb;
+  }
+}
+
+
+body { background: #f1f5f9; font-family: system-ui, sans-serif; }
